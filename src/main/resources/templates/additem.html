@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Add Item</title>
+</head>
+<body>
+<body bgcolor="LightGray"></body>
+<div align="center">
+	<form action="#" th:action="@{/save}" th:object="${item}" method="POST">
+
+		<table>
+			<tr>
+				<td>Item Name</td>
+				<td><input type="text" required th:field="*{name}" /></td>
+			</tr>
+			<tr>
+				<td>Qty</td>
+				<td><input type="number" required th:field="*{quantity}" /></td>
+			</tr>
+		</table>
+		<input type="submit" value="save" />
+	</form>
+</div>
+</body>
+</html>
